@@ -1,0 +1,113 @@
+// bower:scss
+// endbower
+
+body {
+  background: #fafafa;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+$red: #fa6855;
+$p_1_length: 81;
+$p_2_length: 156;
+$p_3_length: 210;
+$p_4_length: 303;
+$p_5_length: 71;
+$p_6_length: 116;
+
+.path {
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  fill: rgba(0, 0, 0, 0);
+  stroke: $red;
+  stroke-width: 1px;
+}
+
+
+@keyframes path_1 {
+  0% {
+    stroke-dashoffset: $p_1_length;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes path_2 {
+  0% {
+    stroke-dashoffset: $p_2_length;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes path_3 {
+  0% {
+    stroke-dashoffset: $p_3_length;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes path_4 {
+  0% {
+    stroke-dashoffset: $p_4_length;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes path_5 {
+  0% {
+    stroke-dashoffset: $p_5_length;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes path_6 {
+  0% {
+    stroke-dashoffset: $p_6_length;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.path1 {
+  animation-name: path_1;
+  stroke-dasharray: $p_1_length;
+}
+.path2 {
+  animation-name: path_2;
+  stroke-dasharray: $p_2_length;
+}
+.path3 {
+  animation-name: path_3;
+  animation-delay: 2s;
+  stroke-dasharray: $p_3_length;
+  stroke-dashoffset: $p_3_length;
+}
+.path4 {
+  animation-delay: 2s;
+  animation-name: path_4;
+  stroke-dasharray: $p_4_length;
+  stroke-dashoffset: $p_4_length;
+}
+.path5 {
+  animation-delay: 2s;
+  animation-name: path_5;
+  stroke-dasharray: $p_5_length;
+  stroke-dashoffset: $p_5_length;
+}
+.path6 {
+  animation-delay: 2s;
+  animation-name: path_6;
+  stroke-dasharray: $p_6_length;
+  stroke-dashoffset: $p_6_length;
+}
