@@ -12,47 +12,22 @@ body {
 }
 
 $red: #fa6855;
-$p_1_length: 81;
-$p_2_length: 156;
-$p_3_length: 210;
-$p_4_length: 303;
-$p_5_length: 71;
-$p_6_length: 116;
+$p_1_length: 135; // $0.getTotalLength()
+$p_2_length: 270;
+$p_3_length: 107;
 $duration: 1s;
 
 .path {
   animation-duration: $duration;
   animation-fill-mode: both;
   animation-timing-function: linear;
-  animation-iteration-count: alternate;
+  animation-iteration-count: 1;
   fill: rgba(0, 0, 0, 0);
   stroke: $red;
-  stroke-width: 1px;
+  stroke-width: 16px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
 }
-
-.full_path {
-  fill-rule: evenodd;
-  /*stroke: $red;*/
-  /*stroke-width: 1px;*/
-
-  animation-duration: $duration / 2;
-  animation-fill-mode: forwards;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-  animation-delay: $duration * 2;
-  animation-name: full_path;
-  fill: rgba(0, 0, 0, 0);
-}
-
-@keyframes full_path {
-  0% {
-    fill: rgba(0, 0, 0, 0);
-  }
-  100% {
-    fill: $red;
-  }
-}
-
 
 @keyframes path_1 {
   0% {
@@ -78,60 +53,18 @@ $duration: 1s;
     stroke-dashoffset: 0;
   }
 }
-@keyframes path_4 {
-  0% {
-    stroke-dashoffset: $p_4_length;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-@keyframes path_5 {
-  0% {
-    stroke-dashoffset: $p_5_length;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-@keyframes path_6 {
-  0% {
-    stroke-dashoffset: $p_6_length;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
 
 .path1 {
   animation-name: path_1;
   stroke-dasharray: $p_1_length;
 }
 .path2 {
+  animation-delay: $duration;
   animation-name: path_2;
   stroke-dasharray: $p_2_length;
 }
 .path3 {
+  animation-delay: $duration;
   animation-name: path_3;
-  animation-delay: $duration;
   stroke-dasharray: $p_3_length;
-  stroke-dashoffset: $p_3_length;
-}
-.path4 {
-  animation-delay: $duration;
-  animation-name: path_4;
-  stroke-dasharray: $p_4_length;
-  stroke-dashoffset: $p_4_length;
-}
-.path5 {
-  animation-delay: $duration;
-  animation-name: path_5;
-  stroke-dasharray: $p_5_length;
-  stroke-dashoffset: $p_5_length;
-}
-.path6 {
-  animation-delay: $duration;
-  animation-name: path_6;
-  stroke-dasharray: $p_6_length;
-  stroke-dashoffset: $p_6_length;
 }
