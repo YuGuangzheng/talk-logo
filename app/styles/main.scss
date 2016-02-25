@@ -12,78 +12,26 @@ body {
 }
 
 $red: #fa6855;
-$p_1_length: 135; // $0.getTotalLength()
-$p_2_length: 270;
-$p_3_length: 107;
-$duration: 4s;
+$duration: 3s;
 
-@keyframes path_1 {
-  15%, 66%, 100% {
+@keyframes path {
+  0%, 100% {
     stroke: $red;
-    stroke-dashoffset: 0;
   }
-  33% {
-    stroke: white;
-    stroke-dashoffset: 0;
-  }
-  33.001% {
-    stroke: $red;
-    stroke-dashoffset: $p_1_length;
-  }
-}
-
-@keyframes path_2 {
-  15%, 100% {
-    stroke: $red;
-    stroke-dashoffset: 0;
-  }
-  33%, 66% {
-    stroke: white;
-    stroke-dashoffset: 0;
-  }
-  66.01% {
-    stroke: $red;
-    stroke-dashoffset: $p_2_length;
-  }
-}
-
-@keyframes path_3 {
-  15%, 100% {
-    stroke: $red;
-    stroke-dashoffset: 0;
-  }
-  33%, 66% {
-    stroke: white;
-    stroke-dashoffset: 0;
-  }
-  66.01% {
-    stroke-dashoffset: $p_3_length;
-    stroke: $red;
+  50% {
+    stroke: rgba($red, 0.5);
   }
 }
 
 .path {
+  animation-name: path;
   animation-duration: $duration;
-  animation-timing-function: linear;
+  animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   fill: rgba(0, 0, 0, 0);
   stroke: $red;
   stroke-width: 16px;
   stroke-linejoin: round;
   stroke-linecap: round;
-  &.path1 {
-    animation-name: path_1;
-    stroke-dasharray: $p_1_length;
-  }
-
-  &.path2 {
-    animation-name: path_2;
-    stroke-dasharray: $p_2_length;
-  }
-
-  &.path3 {
-    animation-name: path_3;
-    stroke-dasharray: $p_3_length;
-  }
 }
 
