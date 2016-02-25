@@ -16,21 +16,17 @@ $duration: 3s;
 
 @keyframes path {
   0%, 100% {
-    stroke: rgba($red, 0.5);
+    stroke: $red;
   }
   50% {
-    stroke: $red;
+    stroke: rgba($red, 0.5);
   }
 }
 
 .path {
-  animation-name: path;
-  animation-duration: $duration;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+  animation: $duration ease-in-out 0s infinite path;
   fill: rgba(0, 0, 0, 0);
   stroke-width: 16px;
   stroke-linejoin: round;
   stroke-linecap: round;
 }
-
