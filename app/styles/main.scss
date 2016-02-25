@@ -26,6 +26,7 @@ $duration: 3s;
 .path {
   animation: $duration ease-in-out 0s infinite path;
   fill: rgba(0, 0, 0, 0);
+  stroke: $red;
   stroke-width: 16px;
   stroke-linejoin: round;
   stroke-linecap: round;
