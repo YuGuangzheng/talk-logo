@@ -16,10 +16,10 @@ $duration: 3s;
 
 @keyframes path {
   0%, 100% {
-    stroke: $red;
+    stroke: rgba($red, 0.5);
   }
   50% {
-    stroke: rgba($red, 0.5);
+    stroke: $red;
   }
 }
 
@@ -29,7 +29,6 @@ $duration: 3s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   fill: rgba(0, 0, 0, 0);
-  stroke: $red;
   stroke-width: 16px;
   stroke-linejoin: round;
   stroke-linecap: round;
